@@ -1,0 +1,50 @@
+---
+format:
+  html:
+    toc: false
+    number-sections: true
+    theme: cosmo
+---
+
+
+---
+
+# Dicionário de Variáveis
+
+## Dataset: SIH-RD (microdatasus)
+
+| Variável | Tipo (R) | Unidade | Descrição |
+|-------------------|------------------|------------------|-------------------------|
+| **N_AIH** | character | — | Número da Autorização de Internação Hospitalar (AIH). |
+| **ANO_CMPT** | integer | ano | Ano de competência do processamento da AIH. |
+| **MES_CMPT** | integer | mês (1–12) | Mês de competência do processamento da AIH. |
+| **UF_ZI** | integer | código UF | Código da Unidade Federativa da internação. |
+| **MUNIC_RES** | integer | código IBGE | Código do município de residência do paciente. |
+| **NASC** | Date | data | Data de nascimento do paciente. |
+| **IDADE** | integer | anos | Idade do paciente na data da internação. |
+| **SEXO** | factor | código | Sexo do paciente conforme codificação do SIH. |
+| **DIAG_PRINC** | character | CID-10 | Código do diagnóstico principal da internação. |
+| **QT_DIARIAS** | integer | dias | Quantidade de diárias de internação autorizadas. |
+| **DT_INTER** | Date | data | Data de internação hospitalar. |
+| **DT_SAIDA** | Date | data | Data de saída hospitalar. |
+| **VAL_SP** | numeric | R\$ | Valor referente aos serviços profissionais. |
+| **VAL_TOT** | numeric | R\$ | Valor total da AIH. |
+
+------------------------------------------------------------------------
+
+# 🌤 INMET (Dados Meteorológicos)
+
+Base meteorológica com variáveis climáticas diárias.
+
+| Variável | Tipo (R) | Unidade | Descrição |
+|-----------------------|-----------------|-----------------|------------------------|
+| **ESTACAO** | character | — | Código identificador da estação meteorológica. |
+| **DATA** | Date | data | Data da observação meteorológica. |
+| **HORA** | character | HH:MM | Horário da observação (quando aplicável). |
+| **TEMP_MAX** | numeric | °C | Temperatura máxima registrada no dia. |
+| **TEMP_MIN** | numeric | °C | Temperatura mínima registrada no dia. |
+| **TEMP_MEDIA** | numeric | °C | Temperatura média do dia. |
+| **UMIDADE_MAX** | numeric | \% | Umidade relativa máxima do ar. |
+| **UMIDADE_MIN** | numeric | \% | Umidade relativa mínima do ar. |
+| **UMIDADE_MEDIA** | numeric | \% | Umidade relativa média do ar. |
+| **PRECIPITACAO** | numeric | mm | Precipitação pluviométrica acumulada no período. |
