@@ -71,15 +71,19 @@ dados_final <- bind_rows(lista_dados)
 dados_final <- dados_final %>%
   group_by(ano, mes) %>%
   summarise(
-    dias_chuva_mensal      = mean(dias_chuva_mensal, na.rm = TRUE),
-    precip_total_mensal_mm = mean(precip_total_mensal_mm, na.rm = TRUE),
-    temp_media_mensal_c    = mean(temp_media_mensal_c, na.rm = TRUE),
+    dias_chuva_mensal          = mean(dias_chuva_mensal, na.rm = TRUE),
+    precip_total_mensal_mm     = sum(precip_total_mensal_mm, na.rm = TRUE),   # soma
+    precip_media_mensal_mm     = mean(precip_total_mensal_mm, na.rm = TRUE),  # média
+    precip_mediana_mensal_mm   = median(precip_total_mensal_mm, na.rm = TRUE),# mediana
+    precip_sd_mensal_mm        = sd(precip_total_mensal_mm, na.rm = TRUE),    # desvio padrão
+    temp_media_mensal_c        = mean(temp_media_mensal_c, na.rm = TRUE),
     .groups = "drop"
   ) %>%
   arrange(ano, mes)
 
+
 # Grava no banco (sobrescreve para garantir estrutura correta)
-dbWriteTable(con, "inmet_dados_norte_mensal_teste4", dados_final, overwrite = TRUE)
+dbWriteTable(con, "inmet_dados_norte_mensal_teste8", dados_final, overwrite = TRUE)
 
 # Finaliza conexão
 dbDisconnect(con)
