@@ -7,7 +7,8 @@
 
 ## Documentação
 
-- [Dicionário de Variáveis](docs/dicionario_variaveis.html)
+- [Dicionário de Variáveis]([Dicionário de Variáveis](https://masfstrnge.github.io/ml-series-temporais-queimadas-brasil/docs/dicionario_variaveis.html)
+)
 
 ## Estrutura do Repositório
 
