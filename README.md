@@ -3,6 +3,8 @@
 ## Bases de Dados Utilizadas
 
 - SIH-RD (DATASUS) (microdatasus)
+- TABNET
+- BDQUEIMADAS
 - INMET (Instituto Nacional de Meteorologia)
 
 ## Documentação
